@@ -1,0 +1,14 @@
+.container_header{
+    width: 100%;
+    border:1px solid red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .icon{
+        margin:15px;
+    }
+    .title{
+        margin: 0;
+        padding: 0;
+    }
+}

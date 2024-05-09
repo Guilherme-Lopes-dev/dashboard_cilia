@@ -7,7 +7,6 @@ import LogoImg from '../../assets/logo.svg'
 import './logo.scss'
 export default {
   name: 'LogoImg',
-
   setup(){
     return{
       LogoImg,
