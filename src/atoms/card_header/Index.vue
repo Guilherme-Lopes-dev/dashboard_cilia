@@ -11,16 +11,12 @@
 
 <script>
 import './card_header.scss'
-import HelpCircle from "vue-material-design-icons/HelpCircle.vue";
 
 export default {
   name: 'CardHeader',
   props: {
     // Altere o tipo da propriedade 'icon' para ser um componente Vue
-    icon: {
-      type: Object,
-      default: HelpCircle // Defina HelpCircle como o valor padrão
-    },
+    icon:String,
     title: String
   }
 }
