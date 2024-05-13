@@ -1,0 +1,52 @@
+
+#menu-overlay {
+    position: fixed;
+    height: 0;
+    width: 100dvw;
+    background-color: #fff;
+    z-index: 110;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+
+    button {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+
+    &.open {
+        height: 100%;
+    }
+
+    a {
+
+        width: 30%;
+        display: flex;
+        margin: 15px 0;
+        justify-content: flex-start;
+        color: black !important;
+        align-items: center;
+
+        p {
+            color: black !important;
+            text-align: center;
+
+
+            color: #fff;
+
+        }
+    }
+
+    span {
+        color: #000000;
+        opacity: 50%;
+        margin-right: 15px;
+    }
+
+
+
+
+}

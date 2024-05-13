@@ -1,0 +1,226 @@
+.navbar {
+    display: flex;
+    width: 100dvw;
+    justify-content: center;
+    position: fixed;
+    padding: 20px !important;
+    z-index: 99;
+    top: 0;
+    background-color: #29B6FF
+    
+    ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    @media (max-width:768px) {
+        position: fixed;
+    }
+
+    .logo {
+        max-width: 160px;
+        max-height: 160px;
+
+    }
+
+
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .white_icons {
+            display: flex;
+
+            span {
+                color: #fff;
+                opacity: 100%;
+
+                &:first-child {
+                    border: 1px solid #22b4fd;
+                    border-radius: 100%;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform: translateX(15px);
+                    background-color: #22b4fd;
+                }
+            }
+        }
+
+        a {
+            margin: 0 25px;
+            font-size: 13px;
+
+            @media(max-width:960px) {
+                font-size: 11px;
+                margin: 0 15px;
+
+            }
+
+            color: #fff !important;
+
+            &.after {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 28px;
+                    left: -15%;
+                    background-color: #000000;
+                    opacity: 50%;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 28px;
+                    right: -15%;
+                    background-color: #000000;
+                    opacity: 50%;
+                }
+            }
+
+            p {
+
+                @media(max-width:960px) {
+                    font-size: 11px;
+
+                }
+
+                color: #fff;
+
+            }
+        }
+
+        span {
+            color: #000000;
+            opacity: 50%;
+        }
+
+        @media (max-width:768px) {
+            display: none;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+            left: -150px;
+
+            .drop_item {
+                font-size: 13px;
+
+                &:nth-last-child(1) {
+                    color: #ED3237 !important;
+                }
+
+                cursor: pointer;
+                color: #000000 !important;
+                margin: 0;
+            }
+        }
+
+        .dropdown-toggle {
+            color: #fff !important;
+        }
+    }
+
+
+
+    .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        span {
+            color: white;
+            margin-right: 20px;
+        }
+    }
+
+
+
+
+
+}
+
+
+
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .open_mobile {
+        span {
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.modal {
+    position: relative;
+    z-index: 99;
+
+    &.drawer {
+
+        display: flex !important;
+
+        pointer-events: none;
+
+        * {
+            pointer-events: none;
+        }
+
+        .modal-dialog {
+            margin: 0px;
+            display: flex;
+            flex: auto;
+            transform: translate(25%, 0);
+
+            .modal-content {
+                border: none;
+                border-radius: 0px;
+
+                .modal-body {
+                    overflow: auto;
+                }
+            }
+
+        }
+
+        &.show {
+            pointer-events: auto;
+
+            * {
+                pointer-events: auto;
+            }
+
+            .modal-dialog {
+                transform: translate(0, 0);
+            }
+        }
+
+        &.right-align {
+            flex-direction: row-reverse;
+        }
+
+        &.left-align {
+            &:not(.show) {
+                .modal-dialog {
+                    transform: translate(-25%, 0);
+                }
+            }
+        }
+
+    }
+
+
+}

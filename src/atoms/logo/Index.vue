@@ -1,15 +1,20 @@
 <template>
-  <img :src="LogoImg" class="header_logo" alt="Logo Cilia" />
+  <img :src="color == 'blue' ? BlueLogo : WhiteLogo " class="header_logo" alt="Logo Cilia" />
 </template>
 
 <script>
-import LogoImg from '../../assets/logo.svg'
+import WhiteLogo from '../../assets/logo.svg'
+import BlueLogo  from '../../assets/blue_logo.svg'
 import './logo.scss'
 export default {
   name: 'LogoImg',
+  props:{
+    color:String
+  },
   setup(){
     return{
-      LogoImg,
+      WhiteLogo,
+      BlueLogo
     }
   }
 

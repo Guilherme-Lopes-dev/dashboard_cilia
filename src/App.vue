@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import NavBar from './components/NavBar.vue';
+import Home from './pages/Home.vue'
+import NavBar from './components/header/Index.vue';
 export default {
   name: 'App',
   components: {
@@ -13,4 +13,3 @@ export default {
   }
 }
 </script>
-

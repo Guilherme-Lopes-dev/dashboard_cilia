@@ -15,6 +15,7 @@ import Highcharts from "highcharts";
 import Wrench from "vue-material-design-icons/Wrench.vue";
 
 export default {
+  name: "IndexGraphics",
   components: {
     Wrench,
   },

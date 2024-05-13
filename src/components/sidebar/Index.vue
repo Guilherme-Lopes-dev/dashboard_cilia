@@ -1,25 +1,40 @@
 <template>
-  <span class="mdl-layout-title"><Logo /></span>
-  <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href=""><Progress />Dashboard(108)</a>
-    <a class="mdl-navigation__link" href=""><ClipboardOutline />Atendimentos(108)</a>
-    <a class="mdl-navigation__link" href=""><AlarmCheck />Reparos(108)</a>
-    <a class="mdl-navigation__link" href=""><Car />Carros Reserva(108)</a>
-    <a class="mdl-navigation__link" href=""><Wrench />Oficinas(108)</a>
-    <a class="mdl-navigation__link" href=""><AccountMultiple />Usuários(108)</a>
-    <a class="mdl-navigation__link" href=""><FolderAccountOutline />Grupos(108)</a>
-    <a class="mdl-navigation__link" href=""><FolderStar />Permissões(108)</a>
-    <a class="mdl-navigation__link" href=""><Cog />Configurações(108)</a>
-  </nav>
-  
-  <main class="mdl-layout__content">
-    <div class="page-content"></div>
-  </main>
-  <div class="mdl-layout__obfuscator"></div>
+  <div
+    class="modal fade drawer left-align"
+    id="drawer"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="drawer-left"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="side_menu_header">
+            <button class="btn_menu_mobile" data-toggle="modal" data-target="#drawer">
+              <WindowClose :size="35" />
+            </button>
+            <Logo :size="45" color="blue"/>
+          </div>
+          <div class="side_menu_body">
+            <a href=""><Progress />Dashboard(108)</a>
+            <a href=""><ClipboardOutline />Atendimentos(108)</a>
+            <a href=""><AlarmCheck />Reparos(108)</a>
+            <a href=""><Car />Carros Reserva(108)</a>
+            <a href="" class="opacity"><Wrench />Oficinas(108)</a>
+            <a href="" class="opacity"><AccountMultiple />Usuários(108)</a>
+            <a href="" class="opacity"><FolderAccountOutline />Grupos(108)</a>
+            <a href="" class="opacity"><FolderStar />Permissões(108)</a>
+            <a href="" class="opacity"><Cog />Configurações(108)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import { defineComponent } from "vue";
-import Logo from "../atoms/logo/Index.vue";
+import Logo from "../../atoms/logo/Index.vue";
 import Progress from "vue-material-design-icons/ProgressClock.vue";
 import ClipboardOutline from "vue-material-design-icons/ClipboardOutline.vue";
 import AlarmCheck from "vue-material-design-icons/AlarmCheck.vue";
@@ -29,11 +44,13 @@ import FolderAccountOutline from "vue-material-design-icons/FolderAccountOutline
 import FolderStar from "vue-material-design-icons/FolderStar.vue";
 import Cog from "vue-material-design-icons/Cog.vue";
 import Car from "vue-material-design-icons/Car.vue";
-
+import WindowClose from "vue-material-design-icons/WindowClose.vue";
+import './styles.scss'
 export default defineComponent({
   name: "SideBar",
   components: {
     Logo,
+    WindowClose,
     Car,
     Progress,
     ClipboardOutline,
